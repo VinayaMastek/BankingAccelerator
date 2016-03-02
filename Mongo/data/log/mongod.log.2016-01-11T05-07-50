@@ -1,0 +1,43 @@
+2016-01-07T11:00:56.116+0530 I CONTROL  Hotfix KB2731284 or later update is installed, no need to zero-out data files
+2016-01-07T11:00:56.151+0530 W -        [initandlisten] Detected unclean shutdown - D:\Notification\Mongo\data\db\mongod.lock is not empty.
+2016-01-07T11:00:56.157+0530 I JOURNAL  [initandlisten] journal dir=D:\Notification\Mongo\data\db\journal
+2016-01-07T11:00:56.158+0530 I JOURNAL  [initandlisten] recover begin
+2016-01-07T11:00:56.159+0530 I JOURNAL  [initandlisten] recover lsn: 0
+2016-01-07T11:00:56.159+0530 I JOURNAL  [initandlisten] recover D:\Notification\Mongo\data\db\journal\j._0
+2016-01-07T11:00:56.223+0530 I JOURNAL  [initandlisten] recover cleaning up
+2016-01-07T11:00:56.223+0530 I JOURNAL  [initandlisten] removeJournalFiles
+2016-01-07T11:00:56.223+0530 I JOURNAL  [initandlisten] recover done
+2016-01-07T11:00:56.271+0530 I JOURNAL  [durability] Durability thread started
+2016-01-07T11:00:56.271+0530 I JOURNAL  [journal writer] Journal writer thread started
+2016-01-07T11:00:56.274+0530 I CONTROL  [initandlisten] MongoDB starting : pid=9276 port=27017 dbpath=D:\Notification\Mongo\data\db 64-bit host=IND-SPZ7LW75017
+2016-01-07T11:00:56.274+0530 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2016-01-07T11:00:56.274+0530 I CONTROL  [initandlisten] db version v3.0.6
+2016-01-07T11:00:56.275+0530 I CONTROL  [initandlisten] git version: 1ef45a23a4c5e3480ac919b28afcba3c615488f2
+2016-01-07T11:00:56.275+0530 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2016-01-07T11:00:56.275+0530 I CONTROL  [initandlisten] allocator: tcmalloc
+2016-01-07T11:00:56.275+0530 I CONTROL  [initandlisten] options: { config: "D:\Notification\Mongo\mongodb.cfg", storage: { dbPath: "D:\Notification\Mongo\data\db" }, systemLog: { destination: "file", path: "D:\Notification\Mongo\data\log\mongod.log" } }
+2016-01-07T11:00:57.820+0530 I NETWORK  [initandlisten] waiting for connections on port 27017
+2016-01-07T11:00:59.139+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50068 #1 (1 connection now open)
+2016-01-07T11:01:12.515+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50072 #2 (2 connections now open)
+2016-01-07T11:01:13.838+0530 I COMMAND  [conn2] command admin.$cmd command: saslContinue { saslContinue: 1, conversationId: 1, payload: BinData(0, 633D626977732C723D7B56794327577A6F6E475974784222792B726F692F7B255D4F6D686173384867613678327931306D743745463555447A347734422F5631322C703D5275...) } keyUpdates:0 writeConflicts:0 numYields:0 reslen:108 locks:{} 295ms
+2016-01-07T11:01:13.839+0530 I ACCESS   [conn2] Successfully authenticated as principal inbeta on admin
+2016-01-09T16:45:12.937+0530 I CONTROL  CTRL_CLOSE_EVENT signal
+2016-01-09T16:45:13.074+0530 I CONTROL  [consoleTerminate] got CTRL_CLOSE_EVENT, will terminate after current cmd ends
+2016-01-09T16:45:13.160+0530 I CONTROL  [consoleTerminate] now exiting
+2016-01-09T16:45:13.160+0530 I NETWORK  [consoleTerminate] shutdown: going to close listening sockets...
+2016-01-09T16:45:13.161+0530 I NETWORK  [consoleTerminate] closing listening socket: 348
+2016-01-09T16:45:13.186+0530 I NETWORK  [consoleTerminate] shutdown: going to flush diaglog...
+2016-01-09T16:45:13.186+0530 I NETWORK  [consoleTerminate] shutdown: going to close sockets...
+2016-01-09T16:45:13.265+0530 I STORAGE  [consoleTerminate] shutdown: waiting for fs preallocator...
+2016-01-09T16:45:13.265+0530 I STORAGE  [consoleTerminate] shutdown: final commit...
+2016-01-09T16:45:13.415+0530 I JOURNAL  [consoleTerminate] journalCleanup...
+2016-01-09T16:45:13.415+0530 I JOURNAL  [consoleTerminate] removeJournalFiles
+2016-01-09T16:45:13.417+0530 I NETWORK  [conn1] end connection 127.0.0.1:50068 (1 connection now open)
+2016-01-09T16:45:13.417+0530 I NETWORK  [conn2] end connection 127.0.0.1:50072 (1 connection now open)
+2016-01-09T16:45:13.518+0530 I JOURNAL  [consoleTerminate] Terminating durability thread ...
+2016-01-09T16:45:13.572+0530 I JOURNAL  [journal writer] Journal writer thread stopped
+2016-01-09T16:45:13.588+0530 I JOURNAL  [durability] Durability thread stopped
+2016-01-09T16:45:13.601+0530 I STORAGE  [consoleTerminate] shutdown: closing all files...
+2016-01-09T16:45:13.976+0530 I STORAGE  [consoleTerminate] closeAllFiles() finished
+2016-01-09T16:45:13.976+0530 I STORAGE  [consoleTerminate] shutdown: removing fs lock...
+2016-01-09T16:45:13.977+0530 I CONTROL  [consoleTerminate] dbexit:  rc: 12

@@ -1,0 +1,174 @@
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> 
+</script>
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Medical Report Analysis</title>
+<meta xmlns="http://www.w3.org/1999/xhtml"
+	content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
+</head>
+<body>
+
+	<script type="text/javascript">
+    $(document).ready(function () {
+        $('#butCallAjax').click(function () {
+            var url = 'http://localhost:9090/MedicalTextAnalysis/rest/textanalysis/annotatePDFwithmedicalterms?files=D:/workspace/MedicalTextAnalysis/DocRepository/Test eSAR.pdf;';
+            jQuery.support.cors = true;
+            $.ajax(
+                {
+                    type: 'GET',
+                    url:url,
+                    data: '{}',
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (data) {
+
+	                   	$('#disorders > tbody:last').append('<tr>');
+	                		$('#disorders > tbody:last').append('<th>' + 'Date'+ '</th>');
+	                		$('#disorders > tbody:last').append('<th>' + 'Page'+ '</th>');
+	                		$('#disorders > tbody:last').append('<th>' + 'Sentence'+ '</th>');
+	                		$('#disorders > tbody:last').append('<th>' + 'Disorder'+ '</th>');
+	                		$('#disorders > tbody:last').append('<th>' + 'Risk'+ '</th>');
+	                		$('#disorders > tbody:last').append('</tr>');
+                   		$('#procedures > tbody:last').append('<tr>');
+	                		$('#procedures > tbody:last').append('<th>' + 'Date'+ '</th>');
+	                		$('#procedures > tbody:last').append('<th>' + 'Page'+ '</th>');
+	                		$('#procedures > tbody:last').append('<th>' + 'Sentence'+ '</th>');
+	                		$('#procedures > tbody:last').append('<th>' + 'Procedure'+ '</th>');
+	                		$('#procedures > tbody:last').append('<th>' + 'Reading'+ '</th>');
+	                		$('#procedures > tbody:last').append('<th>' + 'Min Range'+ '</th>');
+	                		$('#procedures > tbody:last').append('<th>' + 'Max Range'+ '</th>');
+	                		$('#procedures > tbody:last').append('<th>' + 'Risk'+ '</th>');
+	                		$('#procedures > tbody:last').append('</tr>');
+
+                   		$('#findings > tbody:last').append('<tr>');
+	                		$('#findings > tbody:last').append('<th>' + 'Date'+ '</th>');
+                   		$('#findings > tbody:last').append('<th>' + 'Page'+ '</th>');
+	                		$('#findings > tbody:last').append('<th>' + 'Sentence'+ '</th>');
+	                		$('#findings > tbody:last').append('<th>' + 'Finding'+ '</th>');
+	                		$('#findings > tbody:last').append('<th>' + 'Risk'+ '</th>');
+	                		$('#findings > tbody:last').append('</tr>');
+
+	                		$('#products > tbody:last').append('<tr>');
+	                		$('#products > tbody:last').append('<th>' + 'Date'+ '</th>');
+	                		$('#products > tbody:last').append('<th>' + 'Page'+ '</th>');
+	                		$('#products > tbody:last').append('<th>' + 'Sentence'+ '</th>');
+	                		$('#products > tbody:last').append('<th>' + 'Medication'+ '</th>');
+	                		$('#products > tbody:last').append('<th>' + 'Type'+ '</th>');
+	                		$('#products > tbody:last').append('<th>' + 'Strength'+ '</th>');
+	                		$('#products > tbody:last').append('<th>' + 'Dosage'+ '</th>');
+	                		$('#products > tbody:last').append('<th>' + 'Risk'+ '</th>');
+	                		$('#products > tbody:last').append('</tr>');
+
+                        $.each(data, function (i, theItem) {
+                        	
+                        	if (theItem['annotationtype'] == '1.disorder'){
+	                       		$('#disorders > tbody:last').append('<tr>');
+	   	                 		$('#disorders > tbody:last').append('<td>' + theItem["eventDt"] + '</td>');
+	                       		$('#disorders > tbody:last').append('<td>' + theItem["page"] + '</td>');
+	   	                 		$('#disorders > tbody:last').append('<td>' + theItem["sentence"] + '</td>');
+	   	                 		$('#disorders > tbody:last').append('<td>' + theItem["annotationtext"] + '</td>');
+	   	                 		$('#disorders > tbody:last').append('<td>' + ((theItem["risk"]==null) ? " - " :theItem["risk"]) + '</td>');
+	      	              		$('#disorders > tbody:last').append('</tr>');
+                        	}
+                        	
+
+                        	if (theItem['annotationtype'] == '2.procedure'){
+	                       		
+                        		$('#procedures > tbody:last').append('<tr>');
+                        		$('#procedures > tbody:last').append('<td>' + theItem["eventDt"]  + '</td>');
+                        		$('#procedures > tbody:last').append('<td>' + theItem["page"] + '</td>');
+	   	                 		$('#procedures > tbody:last').append('<td>' + theItem["annotationtext"] + '</td>');
+	   	                	 	$('#procedures > tbody:last').append('<td>' + ((theItem["value"]==null) ? " - " :theItem["value"]) + '</td>');
+	   	                 		$('#procedures > tbody:last').append('<td>' + ((theItem["unit"]==null) ? " - " :theItem["unit"]) + '</td>');
+	   	                 		$('#procedures > tbody:last').append('<td>' + ((theItem["startRange"]==null) ? " - " :theItem["startRange"]) + '</td>');
+	   	                 		$('#procedures > tbody:last').append('<td>' + ((theItem["endRange"]==null) ? " - " :theItem["endRange"]) + '</td>');
+	   	                 		$('#procedures > tbody:last').append('<td>' + ((theItem["risk"]==null) ? " - " :theItem["risk"]) + '</td>');
+	      	              		$('#procedures > tbody:last').append('</tr>');
+                        	}
+
+                        	if (theItem['annotationtype'] == '3.finding'){
+	                       		$('#findings > tbody:last').append('<tr>');
+	   	                 		$('#findings > tbody:last').append('<td>' + theItem["eventDt"] + '</td>');
+	   	                 		$('#findings > tbody:last').append('<td>' + theItem["page"] + '</td>');
+	   	                 		$('#findings > tbody:last').append('<td>' + theItem["sentence"] + '</td>');
+	   	                 		$('#findings > tbody:last').append('<td>' + theItem["annotationtext"] + '</td>');
+	   	                 		$('#findings > tbody:last').append('<td>' + ((theItem["risk"]==null) ? " - " :theItem["risk"]) + '</td>');
+	      	              		$('#findings > tbody:last').append('</tr>');
+                        	}
+
+                        	if ((theItem['annotationtype'] == '4.product')|| (theItem['annotationtype'] == '4.substance')){
+	                       		$('#products > tbody:last').append('<tr>');
+	   	                 		$('#products > tbody:last').append('<td>' + theItem["eventDt"] + '</td>');
+	                       		$('#products > tbody:last').append('<td>' + theItem["page"] + '</td>');
+	   	                 		$('#products > tbody:last').append('<td>' + theItem["sentence"] + '</td>');
+	   	                 		$('#products > tbody:last').append('<td>' + theItem["annotationtext"] + '</td>');
+	   	                 		$('#products > tbody:last').append('<td>' + ((theItem["value"]==null) ? " - " :theItem["value"]) + '</td>');
+	   	                 		$('#products > tbody:last').append('<td>' + ((theItem["measure"]==null) ? " - " :theItem["measure"]) + '</td>');
+	   	                 		$('#products > tbody:last').append('<td>' + ((theItem["unit"]==null) ? " - " :theItem["unit"]) + '</td>');
+	   	                 		$('#products > tbody:last').append('<td>' + ((theItem["risk"]==null) ? " - " :theItem["risk"]) + '</td>');
+	      	              		$('#products > tbody:last').append('</tr>');
+                        	}
+                        	
+                        }); 
+                    },
+                    error: function (msg, url, line) {
+                        alert('Error : function(msg, url, line)');
+                        alert('msg = ' + msg + ', url = ' + url + ', line = ' + line);
+                    }
+                });
+        });
+    });
+</script>
+
+	<div id="stylized" class="myform">
+		<form id="form" action="#" name="form">
+			<h1>Medical Report Analysis</h1>
+			<div class="spacer"></div>
+
+			<button id="butCallAjax" type="button">Analyse File</button>
+			<div class="content-separator"></div>
+			<div class="spacer"></div>
+			<details>
+				<summary>Disorders</summary>
+				<table id="disorders">
+					<tbody>
+						<tr></tr>
+					</tbody>
+				</table>
+			</details>
+			<div class="spacer"></div>
+			<details>
+				<summary>Procedures</summary>
+				<table id="procedures">
+					<tbody>
+						<tr></tr>
+					</tbody>
+				</table>
+			</details>
+			<div class="spacer"></div>
+
+			<details>
+				<summary>Products and Substances</summary>
+				<table id="products">
+					<tbody>
+						<tr></tr>
+					</tbody>
+				</table>
+			</details>
+			<details>
+				<div class="spacer"></div>
+
+				<summary>Findings</summary>
+				<table id="findings">
+					<tbody>
+						<tr></tr>
+					</tbody>
+				</table>
+			</details>
+
+		</form>
+	</div>
+</body>

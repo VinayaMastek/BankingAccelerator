@@ -1,0 +1,13 @@
+Dear $fname $lname,
+
+An ATM withdrawal has been made of amount $amount from your account number $accountNumber
+on $transactionDt at $location and current balance is $balAmount 
+
+
+Thank you for banking with us.
+
+Regards
+Relationship Manager
+
+
+

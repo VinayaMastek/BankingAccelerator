@@ -1,0 +1,55 @@
+{
+	"id": "da224b9d-a779-20cb-c74d-ba1b906e5677",
+	"name": "SMSProcessor",
+	"description": "",
+	"order": [
+		"d8defb2d-76ff-20ac-32a5-e9e39f7895e8",
+		"f98325a9-a943-1726-84e5-bec4b4c74bfd"
+	],
+	"folders": [],
+	"timestamp": 1444992184684,
+	"owner": "",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "d8defb2d-76ff-20ac-32a5-e9e39f7895e8",
+			"headers": "",
+			"url": "http://localhost:8080/SMSProcessor-0.1/spring/parserservice/getParsedSMS?smsData={\"customerId\": \"1\", \"source\" : \"BOOKMYSHOW\",\"message\":\"Please click on the below link to get your QR Code. Just scan and pickup your tickets from the Venue kiosk(s) - http://bmsurl.co/4piJ4vMr Hi Customer, Booking ID: FMMA0000252585. Seats: SL-C12,C11,C10, 3 seat(s) for The Martian (3D) (U/A) on Sun, 4 Oct, 2015 4:55pm at INOX: Inorbit Mall, Malad (W) (SCREEN 1). Please carry your CC/DC card which was used for booking tickets.Please use your Conf. No. 252585 and TPIN No./Kiosk Pick-up Code : 7614 to collect tickets at INOX: Inorbit Mall, Malad (W)\"}http://localhost:8080/SMSProcessor-0.1/spring/parserservice/getParsedSMS?smsData={\"customerId\": \"1\", \"source\" : \"BOOKMYSHOW\",\"message\":\"Please click on the below link to get your QR Code. Just scan and pickup your tickets from the Venue kiosk(s) - http://bmsurl.co/4piJ4vMr Hi Customer, Booking ID: FMMA0000252585. Seats: SL-C12,C11,C10, 3 seat(s) for The Martian (3D) (U/A) on Sun, 4 Oct, 2015 4:55pm at INOX: Inorbit Mall, Malad (W) (SCREEN 1). Please carry your CC/DC card which was used for booking tickets.Please use your Conf. No. 252585 and TPIN No./Kiosk Pick-up Code : 7614 to collect tickets at INOX: Inorbit Mall, Malad (W)\"}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1445861514468,
+			"name": "BookMyShow",
+			"description": "",
+			"collectionId": "da224b9d-a779-20cb-c74d-ba1b906e5677",
+			"responses": []
+		},
+		{
+			"id": "f98325a9-a943-1726-84e5-bec4b4c74bfd",
+			"headers": "",
+			"url": "http://localhost:8080/SMSProcessor-0.1/spring/parserservice/getParsedSMS?smsData={\"customerId\": \"1\", \"source\" : \"IRCTC\",\"message\":\"Congrates!! Your ticket booked successfully. PNR is: 2345678901 Ticket No: :0672261674 Booking Status: Rakesh CONFIRM C1 76 WS Sarita CONFIRM C1 77 Ticket Amt: 900 SC: 20 Src: New delhi Dst: Chandigard Date of Journey: 14/04/2013 Sch Dep 07:40 hrs\"}",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "da224b9d-a779-20cb-c74d-ba1b906e5677",
+			"data": [],
+			"dataMode": "params",
+			"name": "IRCTC",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1445861853338,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}

@@ -1,0 +1,64 @@
+2015-10-15T17:20:47.550+0530 I CONTROL  Hotfix KB2731284 or later update is installed, no need to zero-out data files
+2015-10-15T17:20:47.561+0530 I JOURNAL  [initandlisten] journal dir=D:\Notification\Mongo\data\db\journal
+2015-10-15T17:20:47.562+0530 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-10-15T17:20:47.739+0530 I JOURNAL  [durability] Durability thread started
+2015-10-15T17:20:47.741+0530 I JOURNAL  [journal writer] Journal writer thread started
+2015-10-15T17:20:47.742+0530 I CONTROL  [initandlisten] MongoDB starting : pid=7828 port=27017 dbpath=D:\Notification\Mongo\data\db 64-bit host=IND-SPZ7LW75017
+2015-10-15T17:20:47.743+0530 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2015-10-15T17:20:47.743+0530 I CONTROL  [initandlisten] db version v3.0.6
+2015-10-15T17:20:47.743+0530 I CONTROL  [initandlisten] git version: 1ef45a23a4c5e3480ac919b28afcba3c615488f2
+2015-10-15T17:20:47.743+0530 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2015-10-15T17:20:47.744+0530 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-10-15T17:20:47.744+0530 I CONTROL  [initandlisten] options: { config: "D:\Notification\Mongo\mongodb.cfg", storage: { dbPath: "D:\Notification\Mongo\data\db" }, systemLog: { destination: "file", path: "D:\Notification\Mongo\data\log\mongod.log" } }
+2015-10-15T17:20:47.896+0530 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-10-15T17:20:52.672+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50059 #1 (1 connection now open)
+2015-10-15T17:21:04.345+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50069 #2 (2 connections now open)
+2015-10-15T17:21:04.846+0530 I COMMAND  [conn2] command admin.$cmd command: saslContinue { saslContinue: 1, conversationId: 1, payload: BinData(0, 633D626977732C723D38735A717D4468355B326A50256F344E433353475B2A41764F6751524E58413252435A736E63536B376B6855706A43586E62505061324A4E2C703D3135...) } keyUpdates:0 writeConflicts:0 numYields:0 reslen:108 locks:{} 370ms
+2015-10-15T17:21:04.847+0530 I ACCESS   [conn2] Successfully authenticated as principal inbeta on admin
+2015-10-15T17:29:07.902+0530 I NETWORK  [conn1] end connection 127.0.0.1:50059 (1 connection now open)
+2015-10-15T17:29:07.903+0530 I NETWORK  [conn2] end connection 127.0.0.1:50069 (0 connections now open)
+2015-10-15T17:29:24.627+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50218 #3 (1 connection now open)
+2015-10-15T17:31:06.293+0530 I NETWORK  [conn3] end connection 127.0.0.1:50218 (0 connections now open)
+2015-10-15T17:31:19.340+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50291 #4 (1 connection now open)
+2015-10-15T17:31:26.512+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50304 #5 (2 connections now open)
+2015-10-15T17:31:26.646+0530 I ACCESS   [conn5] Successfully authenticated as principal inbeta on admin
+2015-10-15T17:33:04.214+0530 I NETWORK  [conn5] end connection 127.0.0.1:50304 (1 connection now open)
+2015-10-15T17:33:04.214+0530 I NETWORK  [conn4] end connection 127.0.0.1:50291 (0 connections now open)
+2015-10-15T17:33:15.577+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50337 #6 (1 connection now open)
+2015-10-15T17:34:03.146+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50378 #7 (2 connections now open)
+2015-10-15T17:34:03.319+0530 I ACCESS   [conn7] Successfully authenticated as principal inbeta on admin
+2015-10-15T17:35:00.102+0530 I NETWORK  [conn6] end connection 127.0.0.1:50337 (1 connection now open)
+2015-10-15T17:35:00.103+0530 I NETWORK  [conn7] end connection 127.0.0.1:50378 (0 connections now open)
+2015-10-15T17:35:05.902+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50405 #8 (1 connection now open)
+2015-10-15T17:41:47.568+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50543 #9 (2 connections now open)
+2015-10-15T17:41:47.602+0530 I ACCESS   [conn9] Successfully authenticated as principal inbeta on admin
+2015-10-15T17:42:39.740+0530 I NETWORK  [conn8] end connection 127.0.0.1:50405 (1 connection now open)
+2015-10-15T17:42:39.742+0530 I NETWORK  [conn9] end connection 127.0.0.1:50543 (0 connections now open)
+2015-10-15T17:42:43.755+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50562 #10 (1 connection now open)
+2015-10-15T18:19:04.201+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51207 #11 (2 connections now open)
+2015-10-15T18:19:04.222+0530 I ACCESS   [conn11] Successfully authenticated as principal inbeta on admin
+2015-10-15T18:37:13.815+0530 I NETWORK  [conn10] end connection 127.0.0.1:50562 (1 connection now open)
+2015-10-15T18:37:13.818+0530 I NETWORK  [conn11] end connection 127.0.0.1:51207 (0 connections now open)
+2015-10-15T18:37:53.835+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51546 #12 (1 connection now open)
+2015-10-15T18:38:27.281+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51580 #13 (2 connections now open)
+2015-10-15T18:38:27.423+0530 I ACCESS   [conn13] Successfully authenticated as principal inbeta on admin
+2015-10-15T18:40:52.183+0530 I NETWORK  [conn13] end connection 127.0.0.1:51580 (1 connection now open)
+2015-10-15T18:40:52.183+0530 I NETWORK  [conn12] end connection 127.0.0.1:51546 (0 connections now open)
+2015-10-15T18:42:08.527+0530 I CONTROL  CTRL_CLOSE_EVENT signal
+2015-10-15T18:42:08.527+0530 I CONTROL  [consoleTerminate] got CTRL_CLOSE_EVENT, will terminate after current cmd ends
+2015-10-15T18:42:08.527+0530 I CONTROL  [consoleTerminate] now exiting
+2015-10-15T18:42:08.527+0530 I NETWORK  [consoleTerminate] shutdown: going to close listening sockets...
+2015-10-15T18:42:08.527+0530 I NETWORK  [consoleTerminate] closing listening socket: 348
+2015-10-15T18:42:08.527+0530 I NETWORK  [consoleTerminate] shutdown: going to flush diaglog...
+2015-10-15T18:42:08.528+0530 I NETWORK  [consoleTerminate] shutdown: going to close sockets...
+2015-10-15T18:42:08.528+0530 I STORAGE  [consoleTerminate] shutdown: waiting for fs preallocator...
+2015-10-15T18:42:08.528+0530 I STORAGE  [consoleTerminate] shutdown: final commit...
+2015-10-15T18:42:08.530+0530 I JOURNAL  [consoleTerminate] journalCleanup...
+2015-10-15T18:42:08.530+0530 I JOURNAL  [consoleTerminate] removeJournalFiles
+2015-10-15T18:42:08.531+0530 I JOURNAL  [consoleTerminate] Terminating durability thread ...
+2015-10-15T18:42:08.630+0530 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-10-15T18:42:08.630+0530 I JOURNAL  [durability] Durability thread stopped
+2015-10-15T18:42:08.630+0530 I STORAGE  [consoleTerminate] shutdown: closing all files...
+2015-10-15T18:42:08.633+0530 I STORAGE  [consoleTerminate] closeAllFiles() finished
+2015-10-15T18:42:08.633+0530 I STORAGE  [consoleTerminate] shutdown: removing fs lock...
+2015-10-15T18:42:08.633+0530 I CONTROL  [consoleTerminate] dbexit:  rc: 12

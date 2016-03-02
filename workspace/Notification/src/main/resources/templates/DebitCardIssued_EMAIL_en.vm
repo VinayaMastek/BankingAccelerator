@@ -1,0 +1,9 @@
+Dear $fname $lname,
+
+We are happy to inform you that you $cardType card $cardNumber is now active. Your card will expire on $expiryDt. Your daily cash withdrawl limit is set to $cardLimit.
+
+Thank you for banking with us.
+
+Regards
+Relationship Manager
+

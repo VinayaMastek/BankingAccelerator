@@ -1,0 +1,64 @@
+2015-12-02T11:57:44.962+0530 I CONTROL  Hotfix KB2731284 or later update is installed, no need to zero-out data files
+2015-12-02T11:57:45.014+0530 I JOURNAL  [initandlisten] journal dir=D:\Notification\Mongo\data\db\journal
+2015-12-02T11:57:45.016+0530 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-12-02T11:57:45.070+0530 I JOURNAL  [durability] Durability thread started
+2015-12-02T11:57:45.070+0530 I JOURNAL  [journal writer] Journal writer thread started
+2015-12-02T11:57:45.074+0530 I CONTROL  [initandlisten] MongoDB starting : pid=8532 port=27017 dbpath=D:\Notification\Mongo\data\db 64-bit host=IND-SPZ7LW75017
+2015-12-02T11:57:45.074+0530 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2015-12-02T11:57:45.075+0530 I CONTROL  [initandlisten] db version v3.0.6
+2015-12-02T11:57:45.075+0530 I CONTROL  [initandlisten] git version: 1ef45a23a4c5e3480ac919b28afcba3c615488f2
+2015-12-02T11:57:45.075+0530 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2015-12-02T11:57:45.075+0530 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-12-02T11:57:45.075+0530 I CONTROL  [initandlisten] options: { config: "D:\Notification\Mongo\mongodb.cfg", storage: { dbPath: "D:\Notification\Mongo\data\db" }, systemLog: { destination: "file", path: "D:\Notification\Mongo\data\log\mongod.log" } }
+2015-12-02T11:57:45.786+0530 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-12-02T12:07:35.593+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53023 #1 (1 connection now open)
+2015-12-02T12:09:10.593+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53057 #2 (2 connections now open)
+2015-12-02T12:09:11.870+0530 I COMMAND  [conn2] command admin.$cmd command: saslContinue { saslContinue: 1, conversationId: 1, payload: BinData(0, 633D626977732C723D525F796472216D6825553A616763536555747121795C5462746E553239547273644F396F504A4C3353725745467559335266524E337471742C703D796F...) } keyUpdates:0 writeConflicts:0 numYields:0 reslen:108 locks:{} 306ms
+2015-12-02T12:09:11.870+0530 I ACCESS   [conn2] Successfully authenticated as principal inbeta on admin
+2015-12-02T12:13:16.673+0530 I NETWORK  [conn2] end connection 127.0.0.1:53057 (1 connection now open)
+2015-12-02T12:13:16.673+0530 I NETWORK  [conn1] end connection 127.0.0.1:53023 (1 connection now open)
+2015-12-02T12:13:41.256+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53133 #3 (1 connection now open)
+2015-12-02T12:13:58.267+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53146 #4 (2 connections now open)
+2015-12-02T12:13:58.399+0530 I ACCESS   [conn4] Successfully authenticated as principal inbeta on admin
+2015-12-02T12:15:08.773+0530 I NETWORK  [conn3] end connection 127.0.0.1:53133 (1 connection now open)
+2015-12-02T12:15:08.774+0530 I NETWORK  [conn4] end connection 127.0.0.1:53146 (0 connections now open)
+2015-12-02T12:16:58.927+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53255 #5 (1 connection now open)
+2015-12-02T12:26:35.460+0530 I NETWORK  [conn5] end connection 127.0.0.1:53255 (0 connections now open)
+2015-12-02T12:26:49.737+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53396 #6 (1 connection now open)
+2015-12-02T12:45:11.472+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53942 #7 (2 connections now open)
+2015-12-02T12:45:11.592+0530 I ACCESS   [conn7] Successfully authenticated as principal inbeta on admin
+2015-12-02T14:06:32.179+0530 I NETWORK  [conn6] end connection 127.0.0.1:53396 (1 connection now open)
+2015-12-02T14:06:32.179+0530 I NETWORK  [conn7] end connection 127.0.0.1:53942 (0 connections now open)
+2015-12-02T14:06:52.802+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55143 #8 (1 connection now open)
+2015-12-03T15:27:35.947+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49582 #9 (2 connections now open)
+2015-12-03T15:27:36.285+0530 I COMMAND  [conn9] command admin.$cmd command: saslStart { saslStart: 1, mechanism: "SCRAM-SHA-1", payload: BinData(0, 6E2C2C6E3D696E626574612C723D5F744369282E73794768536E49222B7B24443A6E28416F26) } keyUpdates:0 writeConflicts:0 numYields:0 reslen:171 locks:{ Global: { acquireCount: { r: 2 } }, MMAPV1Journal: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { R: 1 } } } 137ms
+2015-12-03T15:27:43.673+0530 I COMMAND  [conn9] command admin.$cmd command: saslContinue { saslContinue: 1, conversationId: 1, payload: BinData(0, 633D626977732C723D5F744369282E73794768536E49222B7B24443A6E28416F2633723358585430536F57384E514B773672387153582B3466546165616E30496F2C703D3557...) } keyUpdates:0 writeConflicts:0 numYields:0 reslen:108 locks:{} 287ms
+2015-12-03T15:27:43.674+0530 I ACCESS   [conn9] Successfully authenticated as principal inbeta on admin
+2015-12-03T15:27:44.706+0530 I WRITE    [conn9] insert admin.log query: { _id: ObjectId('566012186ed011e9c0bd01dc'), _class: "dto.NotificationLog", customerId: "3", pref: "EMAIL", notification: "Dear Vinaya S,
+
+An ATM withdrawal has been made of amount 500.0 from your account number CB1000001
+on 09-Sep-2015 at Mumbai and current balance is 550...", communicationId: "vini.salgaonkar@gmail.com", date: "Thu Dec 03 15:27:43 IST 2015" } ninserted:1 keyUpdates:0 writeConflicts:0 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, MMAPV1Journal: { acquireCount: { w: 2 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 36 } }, Database: { acquireCount: { W: 1 } }, Collection: { acquireCount: { W: 1 } } } 276ms
+2015-12-03T15:27:44.707+0530 I COMMAND  [conn9] command admin.$cmd command: insert { insert: "log", ordered: true, documents: [ { _id: ObjectId('566012186ed011e9c0bd01dc'), _class: "dto.NotificationLog", customerId: "3", pref: "EMAIL", notification: "Dear Vinaya S,
+
+An ATM withdrawal has been made of amount 500.0 from your account number CB1000001
+on 09-Sep-2015 at Mumbai and current balance is 550...", communicationId: "vini.salgaonkar@gmail.com", date: "Thu Dec 03 15:27:43 IST 2015" } ] } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, MMAPV1Journal: { acquireCount: { w: 2 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 36 } }, Database: { acquireCount: { W: 1 } }, Collection: { acquireCount: { W: 1 } } } 280ms
+2015-12-03T17:49:31.356+0530 I NETWORK  [conn9] end connection 127.0.0.1:49582 (1 connection now open)
+2015-12-03T17:49:31.357+0530 I NETWORK  [conn8] end connection 127.0.0.1:55143 (1 connection now open)
+2015-12-03T17:49:49.001+0530 I CONTROL  Ctrl-C signal
+2015-12-03T17:49:49.003+0530 I CONTROL  [consoleTerminate] got CTRL_C_EVENT, will terminate after current cmd ends
+2015-12-03T17:49:49.098+0530 I CONTROL  [consoleTerminate] now exiting
+2015-12-03T17:49:49.098+0530 I NETWORK  [consoleTerminate] shutdown: going to close listening sockets...
+2015-12-03T17:49:49.100+0530 I NETWORK  [consoleTerminate] closing listening socket: 348
+2015-12-03T17:49:49.101+0530 I NETWORK  [consoleTerminate] shutdown: going to flush diaglog...
+2015-12-03T17:49:49.102+0530 I NETWORK  [consoleTerminate] shutdown: going to close sockets...
+2015-12-03T17:49:49.103+0530 I STORAGE  [consoleTerminate] shutdown: waiting for fs preallocator...
+2015-12-03T17:49:49.103+0530 I STORAGE  [consoleTerminate] shutdown: final commit...
+2015-12-03T17:49:49.119+0530 I JOURNAL  [consoleTerminate] journalCleanup...
+2015-12-03T17:49:49.119+0530 I JOURNAL  [consoleTerminate] removeJournalFiles
+2015-12-03T17:49:49.185+0530 I JOURNAL  [consoleTerminate] Terminating durability thread ...
+2015-12-03T17:49:49.206+0530 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-12-03T17:49:49.208+0530 I JOURNAL  [durability] Durability thread stopped
+2015-12-03T17:49:49.209+0530 I STORAGE  [consoleTerminate] shutdown: closing all files...
+2015-12-03T17:49:49.222+0530 I STORAGE  [consoleTerminate] closeAllFiles() finished
+2015-12-03T17:49:49.222+0530 I STORAGE  [consoleTerminate] shutdown: removing fs lock...
+2015-12-03T17:49:49.223+0530 I CONTROL  [consoleTerminate] dbexit:  rc: 12

@@ -1,0 +1,9 @@
+Dear $fname $lname,
+
+Your $cardType card $cardNumber is moved to status $cardStatus due to $reason as of $changeDt. 
+
+For any further clarifications please get in touch with your Relationship manager or branch.
+
+Regards
+Relationship Manager
+

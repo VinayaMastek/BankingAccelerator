@@ -1,0 +1,48 @@
+2015-12-07T11:22:54.599+0530 I CONTROL  Hotfix KB2731284 or later update is installed, no need to zero-out data files
+2015-12-07T11:22:54.599+0530 I JOURNAL  [initandlisten] journal dir=D:\Notification\Mongo\data\db\journal
+2015-12-07T11:22:54.599+0530 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-12-07T11:22:54.704+0530 I JOURNAL  [durability] Durability thread started
+2015-12-07T11:22:54.705+0530 I JOURNAL  [journal writer] Journal writer thread started
+2015-12-07T11:22:54.711+0530 I CONTROL  [initandlisten] MongoDB starting : pid=6876 port=27017 dbpath=D:\Notification\Mongo\data\db 64-bit host=IND-SPZ7LW75017
+2015-12-07T11:22:54.711+0530 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2015-12-07T11:22:54.711+0530 I CONTROL  [initandlisten] db version v3.0.6
+2015-12-07T11:22:54.711+0530 I CONTROL  [initandlisten] git version: 1ef45a23a4c5e3480ac919b28afcba3c615488f2
+2015-12-07T11:22:54.711+0530 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2015-12-07T11:22:54.711+0530 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-12-07T11:22:54.711+0530 I CONTROL  [initandlisten] options: { config: "D:\Notification\Mongo\mongodb.cfg", storage: { dbPath: "D:\Notification\Mongo\data\db" }, systemLog: { destination: "file", path: "D:\Notification\Mongo\data\log\mongod.log" } }
+2015-12-07T11:22:54.719+0530 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-12-07T14:57:46.938+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52707 #1 (1 connection now open)
+2015-12-07T15:51:47.011+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53461 #2 (2 connections now open)
+2015-12-07T15:51:47.159+0530 I COMMAND  [conn2] command admin.$cmd command: saslStart { saslStart: 1, mechanism: "SCRAM-SHA-1", payload: BinData(0, 6E2C2C6E3D696E626574612C723D34255C2E5E73525A35687A717A5C7D5756644F4C5D722151) } keyUpdates:0 writeConflicts:0 numYields:0 reslen:171 locks:{ Global: { acquireCount: { r: 2 } }, MMAPV1Journal: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { R: 1 } } } 140ms
+2015-12-07T15:51:48.667+0530 I COMMAND  [conn2] command admin.$cmd command: saslContinue { saslContinue: 1, conversationId: 1, payload: BinData(0, 633D626977732C723D34255C2E5E73525A35687A717A5C7D5756644F4C5D7221514844644532737A4D374665396679355151654D35624F6B4F51754A5A774C337A2C703D7836...) } keyUpdates:0 writeConflicts:0 numYields:0 reslen:108 locks:{} 602ms
+2015-12-07T15:51:48.668+0530 I ACCESS   [conn2] Successfully authenticated as principal inbeta on admin
+2015-12-07T15:51:48.912+0530 I WRITE    [conn2] insert admin.log query: { _id: ObjectId('56655dbceed0e39657efdc9e'), _class: "dto.NotificationLog", customerId: "3", pref: "EMAIL", notification: "Dear Vinaya S,
+
+An ATM withdrawal has been made of amount 250.0 from your account number AC1
+on 18/11/2015 at Mumbai and current balance is 2000.0 
+
+T...", communicationId: "vini.salgaonkar@gmail.com", date: "Mon Dec 07 15:51:48 IST 2015" } ninserted:1 keyUpdates:0 writeConflicts:0 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, MMAPV1Journal: { acquireCount: { w: 2 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 39 } }, Database: { acquireCount: { W: 1 } }, Collection: { acquireCount: { W: 1 } } } 121ms
+2015-12-07T15:51:48.913+0530 I COMMAND  [conn2] command admin.$cmd command: insert { insert: "log", ordered: true, documents: [ { _id: ObjectId('56655dbceed0e39657efdc9e'), _class: "dto.NotificationLog", customerId: "3", pref: "EMAIL", notification: "Dear Vinaya S,
+
+An ATM withdrawal has been made of amount 250.0 from your account number AC1
+on 18/11/2015 at Mumbai and current balance is 2000.0 
+
+T...", communicationId: "vini.salgaonkar@gmail.com", date: "Mon Dec 07 15:51:48 IST 2015" } ] } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, MMAPV1Journal: { acquireCount: { w: 2 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 39 } }, Database: { acquireCount: { W: 1 } }, Collection: { acquireCount: { W: 1 } } } 153ms
+2015-12-07T16:10:56.686+0530 I NETWORK  [conn1] end connection 127.0.0.1:52707 (1 connection now open)
+2015-12-07T16:10:56.688+0530 I NETWORK  [conn2] end connection 127.0.0.1:53461 (1 connection now open)
+2015-12-07T16:11:29.968+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53806 #3 (1 connection now open)
+2015-12-07T16:13:44.712+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53859 #4 (2 connections now open)
+2015-12-07T16:13:44.849+0530 I ACCESS   [conn4] Successfully authenticated as principal inbeta on admin
+2015-12-07T16:14:03.857+0530 I NETWORK  [conn3] end connection 127.0.0.1:53806 (1 connection now open)
+2015-12-07T16:14:03.857+0530 I NETWORK  [conn4] end connection 127.0.0.1:53859 (0 connections now open)
+2015-12-07T16:14:37.318+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53897 #5 (1 connection now open)
+2015-12-07T17:22:49.383+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54785 #6 (2 connections now open)
+2015-12-07T17:22:49.528+0530 I ACCESS   [conn6] Successfully authenticated as principal inbeta on admin
+2015-12-07T17:23:10.326+0530 I NETWORK  [conn5] end connection 127.0.0.1:53897 (1 connection now open)
+2015-12-07T17:23:10.326+0530 I NETWORK  [conn6] end connection 127.0.0.1:54785 (0 connections now open)
+2015-12-07T17:23:25.222+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54800 #7 (1 connection now open)
+2015-12-07T17:24:03.479+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54819 #8 (2 connections now open)
+2015-12-07T17:24:03.591+0530 I ACCESS   [conn8] Successfully authenticated as principal inbeta on admin
+2015-12-08T12:47:54.251+0530 I NETWORK  [conn7] end connection 127.0.0.1:54800 (1 connection now open)
+2015-12-08T12:47:54.251+0530 I NETWORK  [conn8] end connection 127.0.0.1:54819 (0 connections now open)
+2015-12-09T11:21:04.793+0530 I CONTROL  CTRL_CLOSE_EVENT signal

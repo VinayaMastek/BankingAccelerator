@@ -1,0 +1,287 @@
+module com.mastek.CBank;
+import com.mastek.event.*;
+import com.mastek.LifeEventDFOperator;
+
+@Name("Demo - DepositsMade")
+select *
+from DepositsMade;
+
+@Name("Demo - SavingAccountOpened")
+insert into SavingAccountOpened(customerId, accountNumber, accountType, branch,
+								openingDt, amount, accountHolder1Id, accountHolder2Id, accountHolder3Id,
+								accountHolder4Id, overdraftLimit, location)
+select customerId,accountNumber,accountType,branch,openingDt,amount,accountHolder1Id,accountHolder2Id,accountHolder3Id,accountHolder4Id,overdraftLimit,location
+from AccountOpened where accountType = 'SB';
+
+@Name("Demo - CurrentAccountOpened")
+insert into CurrentAccountOpened(customerId, accountNumber, accountType, branch,
+								openingDt, amount, accountHolder1Id, accountHolder2Id, accountHolder3Id,
+								accountHolder4Id, overdraftLimit, location)
+select customerId,accountNumber,accountType,branch,openingDt,amount,accountHolder1Id,accountHolder2Id,accountHolder3Id,accountHolder4Id,overdraftLimit,location
+from AccountOpened where accountType = 'CR';
+
+@Name("Demo - DematAccountOpened")
+insert into DematAccountOpened(customerId, accountNumber, accountType, branch,
+						openingDt, amount, accountHolder1Id,
+						accountHolder2Id, accountHolder3Id, accountHolder4Id,
+						location)
+select customerId, accountNumber, accountType, branch,
+						openingDt, amount, accountHolder1Id,
+						accountHolder2Id, accountHolder3Id, accountHolder4Id,
+						location
+from AccountOpened where accountType = 'DM';
+
+@Name("Demo - LoanAccountOpened")
+insert into LoanAccountOpened(customerId, accountNumber, accountType, branch,
+						openingDt, amount, period, interestRate,
+						interestDeposited, accountHolder1Id, accountHolder2Id,
+						accountHolder3Id, accountHolder4Id, location)
+select customerId, accountNumber, accountType, branch,
+						openingDt, amount, period, interestRate,
+						interestDeposited, accountHolder1Id, accountHolder2Id,
+						accountHolder3Id, accountHolder4Id, location
+from AccountOpened where accountType = 'LN';
+						
+
+@Name("Demo - FDAccountOpened")
+insert into FDAccountOpened(customerId, accountNumber, accountType, branch,
+						openingDt, amount, period, interestRate,
+						interestDeposited, accountHolder1Id, accountHolder2Id,
+						accountHolder3Id, accountHolder4Id, location
+						)
+select customerId, accountNumber, accountType, branch,
+						openingDt, amount, period, interestRate,
+						interestDeposited, accountHolder1Id, accountHolder2Id,
+						accountHolder3Id, accountHolder4Id, location
+from AccountOpened where accountType = 'FD';
+						
+@Name("Demo - RDAccountOpened")
+insert into RDAccountOpened(customerId, accountNumber, accountType, branch,
+						openingDt, amount, period, interestRate,
+						interestDeposited, accountHolder1Id, accountHolder2Id,
+						accountHolder3Id, accountHolder4Id, location
+						)
+select customerId, accountNumber, accountType, branch,
+						openingDt, amount, period, interestRate,
+						interestDeposited, accountHolder1Id, accountHolder2Id,
+						accountHolder3Id, accountHolder4Id, location
+from AccountOpened where accountType = 'RD';					
+
+@Name("Demo - WithdrawalsMade")
+select * 
+from WithdrawalsMade;
+
+@Name("Demo - ATMWithdrawal")
+insert into ATMWithdrawal( accountNumber, amount, transactionDt, transactionId, transactionType, balAmount, customerId, location, reference)
+select 	accountNumber, amount, transactionDt, transactionId,
+		'ATM', balAmount, customerId, location, reference
+from WithdrawalsMade where transactionType = 'ATM';
+						
+@Name("Demo - BillWithdrawal")
+insert into BillWithdrawal( accountNumber, amount, transactionDt, transactionId, transactionType, balAmount, customerId, location, reference)
+select 	accountNumber, amount, transactionDt, transactionId,
+		'BILL', balAmount, customerId, location, reference
+from WithdrawalsMade
+where transactionType = 'BILL';
+						
+@Name("Demo - CCPaymentWithdrawal")
+insert into CCPaymentWithdrawal( accountNumber, amount, transactionDt, transactionId, transactionType, balAmount, customerId, location, reference)
+select 	accountNumber, amount, transactionDt, transactionId,
+		'CCP', balAmount, customerId, location, reference
+from WithdrawalsMade
+where transactionType = 'CCP';
+
+@Name("Demo - CCTransactionWithdrawal")
+insert into CCTransactionWithdrawal( accountNumber, amount, transactionDt, transactionId, transactionType, balAmount, customerId, location, reference)
+select 	accountNumber, amount, transactionDt, transactionId,
+		'CCT', balAmount, customerId, location, reference
+from WithdrawalsMade
+where transactionType = 'CCT';
+
+@Name("Demo - ChargeWithdrawal")
+insert into ChargeWithdrawal( accountNumber, amount, transactionDt, transactionId, transactionType, balAmount, customerId, location, reference)
+select 	accountNumber, amount, transactionDt, transactionId,
+		'CHG', balAmount, customerId, location, reference
+from WithdrawalsMade
+where transactionType = 'CHG';
+
+@Name("Demo - DCWithdrawal")
+insert into DCWithdrawal( accountNumber, amount, transactionDt, transactionId, transactionType, balAmount, customerId, location, reference)
+select 	accountNumber, amount, transactionDt, transactionId,
+		'DCT', balAmount, customerId, location, reference
+from WithdrawalsMade
+where transactionType = 'DCT';
+
+@Name("Demo - EMIWithdrawal")
+insert into EMIWithdrawal( accountNumber, amount, transactionDt, transactionId, transactionType, balAmount, customerId, location, reference)
+select 	accountNumber, amount, transactionDt, transactionId,
+		'EMI', balAmount, customerId, location, reference
+from WithdrawalsMade
+where transactionType = 'EMI';
+
+@Name("Demo - MFWithdrawal")
+insert into MFWithdrawal( accountNumber, amount, transactionDt, transactionId, transactionType, balAmount, customerId, location, reference)
+select 	accountNumber, amount, transactionDt, transactionId,
+		'MF', balAmount, customerId, location, reference
+from WithdrawalsMade
+where transactionType = 'MF';
+
+@Name("Demo - SBWithdrawal")
+insert into SBWithdrawal( accountNumber, amount, transactionDt, transactionId, transactionType, balAmount, customerId, location, reference)
+select 	accountNumber, amount, transactionDt, transactionId,
+		'SB', balAmount, customerId, location, reference
+from WithdrawalsMade
+where transactionType='SB';
+
+@Name("Demo - TPWithdrawal")
+insert into TPWithdrawal( accountNumber, amount, transactionDt, transactionId, transactionType, balAmount, customerId, location, reference)
+select 	accountNumber, amount, transactionDt, transactionId,
+		'TP', balAmount, customerId, location, reference
+from WithdrawalsMade
+where transactionType = 'TP';
+
+@Name("Demo - BankTxnCtx")
+create context SegmentedByCustomer partition by customerId from WithdrawalsMade;
+
+@Name("Demo - BankTxnCtx2")
+create context SegmentedByCustomer2 partition by customerId from CardStatusChange;
+
+@Name("Demo - MaxWithdrawal")
+context SegmentedByCustomer
+insert into MaxWithdrawal(customerId, transactionDt, totAmt, timesecs)
+select customerId, transactionDt, sum(amount) as totAmt, 30
+from WithdrawalsMade.win:time(30 sec)
+group by customerId
+having sum(amount) >= 1000;
+
+@Name("Demo - BlackList")
+context SegmentedByCustomer2
+insert into BlackList(customerId, reason, reference)
+select customerId, 'TooManyOverdueInstances', count(*) as reference
+from CardStatusChange.win:time(30 sec)
+group by customerId
+having count(*) > 3;
+
+@Name("Demo - SelectMaxWithdrawal")
+select * from MaxWithdrawal;
+
+@Name("Demo - CardIssued")
+select *
+from CardIssued;
+
+@Name("Demo - CCCardIssued")
+insert into CreditCardIssued (
+accountNumber, cardNumber, cardAccount, issueDt, cardType, productId, cardLimit, cardHolderId, expiryDt )
+select accountNumber, cardNumber, cardAccount, issueDt, cardType, productId, cardLimit, cardHolderId, expiryDt
+from CardIssued where cardType = 'CR';
+
+@Name("Demo - DBCardIssued")
+insert into DebitCardIssued
+select *
+from CardIssued where cardType = 'DB';
+
+@Name("Demo - CardStatusChange")
+select *
+from CardStatusChange;
+
+@Name("Demo - AccountClosed")
+select *
+from AccountClosed;
+
+@Name("Demo - LoanAccountClosed")
+insert into LoanAccountClosed(customerId, accountNumber, closingDt, reason, location,
+						accountType, prepaid)
+select customerId, accountNumber, closingDt, reason, location,accountType, prepaid
+from AccountClosed where accountType = 'LN';
+
+@Name("Demo - DematAccountClosed")
+insert into DematAccountClosed(customerId, accountNumber, closingDt, reason, location, accountType)
+select customerId, accountNumber, closingDt, reason, location, accountType
+from AccountClosed where accountType = 'DM';
+
+@Name("Demo - SavingAccountClosed")
+insert into SavingAccountClosed(customerId, accountNumber, closingDt, reason, location, accountType)
+select customerId, accountNumber, closingDt, reason, location, accountType
+from AccountClosed where accountType = 'SA';
+
+@Name("Demo - CurrentAccountClosed")
+insert into CurrentAccountClosed(customerId, accountNumber, closingDt, reason, location, accountType)
+select customerId, accountNumber, closingDt, reason, location, accountType
+from AccountClosed where accountType = 'CA';
+
+@Name("Demo - MutualFundInvstSetup")
+select *
+from MutualFundInvstSetup;
+
+@Name("Demo - NewAccountHolderAdded")
+select *
+from NewAccountHolderAdded;
+
+
+@Name("Demo - LifeEvent")
+select *
+from LifeEvent;
+
+
+@Name("Demo - Promotion")
+select *
+from Promotion;
+
+
+@Name("Demo - LE2Promotion-MRG")
+insert into Promotion (customerId, location, promotionActivity, promotionOutletName, promotionOutletType, promotionType, promotionURL, reference)
+select customerId,location,'purchase','Big-Bazar','SHOP','discount','www.google.com','10-percent'
+from LifeEvent
+where lifeEventType = 'Marriage';
+
+@Name("Demo - LE2Promotion - BD")
+insert into Promotion (customerId, location, promotionActivity, promotionOutletName, promotionOutletType, promotionType, promotionURL, reference)
+select customerId,location,'dinner','Olive','RESTUARANT','coupons','www.google.com','Rs500-off'
+from LifeEvent
+where lifeEventType = 'Birthday';
+
+@Name("Demo - DataflowPromotion")
+create dataflow LifeEventFlow
+LifeEventDFOperator (LifeEvent) ->Promotion{};
+
+
+@Name("Demo - BlackList")
+select *
+from BlackList;
+
+@Name("@Demo -SMSEventsSchema")
+create schema SMSEvents() copyfrom BookMyShow,IRCTC;
+
+@Name("@Demo -SMSEvents")
+select * from SMSEvents;
+
+@Name("@Demo - BookMyShowEvents")
+insert into BookMyShow (customerId, smsType ,url, bookingId, movieName , movieType , movieDt , movieTime ,theater ,location) 
+select customerId, smsType ,url, bookingId, movieName , movieType , movieDt , movieTime ,theater ,location
+from SMSEvents where smsType = 'BOOKMYSHOW';
+
+@Name("@Demo - IRCTCEvents")
+insert into IRCTC (customerId, smsType, pnr, ticketNo, bookingDetails,
+						ticketAmt, source, destination, journeyDt, depatureTime) 
+select customerId, smsType, pnr, ticketNo, bookingDetails,
+						ticketAmt, source, destination, journeyDt, depatureTime
+from SMSEvents where smsType = 'IRCTC';
+
+
+@Name("Demo - Other Events Promotion - Restaurant")
+insert into Promotion (customerId, location, promotionActivity, promotionOutletName, promotionOutletType, promotionType, promotionURL, reference)
+select customerId,location,'dinner','Olive','RESTUARANT','coupons','www.google.com','500-off'
+from BookMyShow;
+
+@Name("Demo - Other Events Promotion - Hotel")
+insert into Promotion (customerId, location, promotionActivity, promotionOutletName, promotionOutletType, promotionType, promotionURL, reference)
+select customerId,destination,'stay','Hilton','HOTEL','coupons','www.google.com','Rs500-off'
+from IRCTC;
+
+
+@Name("@Demo -WorkflowActivity")
+select * from WorkflowActivity;
+
+
+
+

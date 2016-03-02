@@ -1,0 +1,3 @@
+Dear $fname $lname,
+
+Total of Rs$totAmt has been withdrawn from you account on $transactionDt within a span of $timesecs secs ! 

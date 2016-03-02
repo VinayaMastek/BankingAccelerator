@@ -1,0 +1,9 @@
+Dear $fname $lname,
+
+A $reference bill of $amount has been paid from your account number $accountNumber
+on $transactionDt at $location current balance is $balAmount 
+
+Thank you for banking with us.
+
+Regards
+Relationship Manager

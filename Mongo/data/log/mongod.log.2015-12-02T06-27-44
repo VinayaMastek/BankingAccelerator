@@ -1,0 +1,110 @@
+2015-11-23T18:05:31.772+0530 I CONTROL  Hotfix KB2731284 or later update is installed, no need to zero-out data files
+2015-11-23T18:05:31.785+0530 W -        [initandlisten] Detected unclean shutdown - D:\Notification\Mongo\data\db\mongod.lock is not empty.
+2015-11-23T18:05:31.794+0530 I JOURNAL  [initandlisten] journal dir=D:\Notification\Mongo\data\db\journal
+2015-11-23T18:05:31.795+0530 I JOURNAL  [initandlisten] recover begin
+2015-11-23T18:05:31.795+0530 I JOURNAL  [initandlisten] recover lsn: 46546478
+2015-11-23T18:05:31.795+0530 I JOURNAL  [initandlisten] recover D:\Notification\Mongo\data\db\journal\j._0
+2015-11-23T18:05:31.814+0530 I JOURNAL  [initandlisten] recover skipping application of section seq:0 < lsn:46546478
+2015-11-23T18:05:31.814+0530 I JOURNAL  [initandlisten] recover skipping application of section seq:19284351 < lsn:46546478
+2015-11-23T18:05:31.814+0530 I JOURNAL  [initandlisten] recover skipping application of section seq:32732280 < lsn:46546478
+2015-11-23T18:05:31.814+0530 I JOURNAL  [initandlisten] recover skipping application of section seq:46489846 < lsn:46546478
+2015-11-23T18:05:31.856+0530 I JOURNAL  [initandlisten] recover cleaning up
+2015-11-23T18:05:31.856+0530 I JOURNAL  [initandlisten] removeJournalFiles
+2015-11-23T18:05:31.857+0530 I JOURNAL  [initandlisten] recover done
+2015-11-23T18:05:31.902+0530 I JOURNAL  [durability] Durability thread started
+2015-11-23T18:05:31.903+0530 I JOURNAL  [journal writer] Journal writer thread started
+2015-11-23T18:05:31.906+0530 I CONTROL  [initandlisten] MongoDB starting : pid=4808 port=27017 dbpath=D:\Notification\Mongo\data\db 64-bit host=IND-SPZ7LW75017
+2015-11-23T18:05:31.906+0530 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2015-11-23T18:05:31.906+0530 I CONTROL  [initandlisten] db version v3.0.6
+2015-11-23T18:05:31.906+0530 I CONTROL  [initandlisten] git version: 1ef45a23a4c5e3480ac919b28afcba3c615488f2
+2015-11-23T18:05:31.906+0530 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2015-11-23T18:05:31.906+0530 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-11-23T18:05:31.906+0530 I CONTROL  [initandlisten] options: { config: "D:\Notification\Mongo\mongodb.cfg", storage: { dbPath: "D:\Notification\Mongo\data\db" }, systemLog: { destination: "file", path: "D:\Notification\Mongo\data\log\mongod.log" } }
+2015-11-23T18:05:35.459+0530 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-11-23T18:05:38.192+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55880 #1 (1 connection now open)
+2015-11-23T18:08:04.241+0530 I NETWORK  [conn1] end connection 127.0.0.1:55880 (0 connections now open)
+2015-11-23T18:08:26.226+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55920 #2 (1 connection now open)
+2015-11-23T18:25:50.198+0530 I NETWORK  [conn2] end connection 127.0.0.1:55920 (0 connections now open)
+2015-11-23T18:29:23.178+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56325 #3 (1 connection now open)
+2015-11-23T18:30:40.049+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56363 #4 (2 connections now open)
+2015-11-23T18:30:40.491+0530 I COMMAND  [conn4] command admin.$cmd command: saslContinue { saslContinue: 1, conversationId: 1, payload: BinData(0, 633D626977732C723D2B63504960406F264F5E396B51373E3F2A6E3375384E407368672B342F54383875322B39344459773435535A51706C4F4655707671662B502C703D4471...) } keyUpdates:0 writeConflicts:0 numYields:0 reslen:108 locks:{} 313ms
+2015-11-23T18:30:40.492+0530 I ACCESS   [conn4] Successfully authenticated as principal inbeta on admin
+2015-11-23T18:33:24.732+0530 I NETWORK  [conn3] end connection 127.0.0.1:56325 (1 connection now open)
+2015-11-23T18:33:24.733+0530 I NETWORK  [conn4] end connection 127.0.0.1:56363 (1 connection now open)
+2015-11-23T18:34:23.126+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56417 #5 (1 connection now open)
+2015-11-23T18:34:38.119+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56431 #6 (2 connections now open)
+2015-11-23T18:34:38.237+0530 I ACCESS   [conn6] Successfully authenticated as principal inbeta on admin
+2015-11-23T18:48:25.982+0530 I NETWORK  [conn5] end connection 127.0.0.1:56417 (1 connection now open)
+2015-11-23T18:48:25.982+0530 I NETWORK  [conn6] end connection 127.0.0.1:56431 (0 connections now open)
+2015-11-23T18:48:54.570+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56617 #7 (1 connection now open)
+2015-11-23T18:49:52.119+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56658 #8 (2 connections now open)
+2015-11-23T18:49:52.226+0530 I ACCESS   [conn8] Successfully authenticated as principal inbeta on admin
+2015-11-23T18:58:51.933+0530 I NETWORK  [conn7] end connection 127.0.0.1:56617 (1 connection now open)
+2015-11-23T18:58:51.933+0530 I NETWORK  [conn8] end connection 127.0.0.1:56658 (1 connection now open)
+2015-11-23T18:59:21.391+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56795 #9 (1 connection now open)
+2015-11-23T18:59:35.450+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56811 #10 (2 connections now open)
+2015-11-23T18:59:35.568+0530 I ACCESS   [conn10] Successfully authenticated as principal inbeta on admin
+2015-11-23T19:00:45.743+0530 I NETWORK  [conn9] end connection 127.0.0.1:56795 (1 connection now open)
+2015-11-23T19:00:45.743+0530 I NETWORK  [conn10] end connection 127.0.0.1:56811 (1 connection now open)
+2015-11-23T19:01:11.412+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56839 #11 (1 connection now open)
+2015-11-23T19:02:29.036+0530 I NETWORK  [conn11] end connection 127.0.0.1:56839 (0 connections now open)
+2015-11-23T19:02:45.603+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56871 #12 (1 connection now open)
+2015-11-23T19:02:57.396+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56888 #13 (2 connections now open)
+2015-11-23T19:02:57.507+0530 I ACCESS   [conn13] Successfully authenticated as principal inbeta on admin
+2015-11-23T19:03:55.043+0530 I NETWORK  [conn12] end connection 127.0.0.1:56871 (1 connection now open)
+2015-11-23T19:03:55.044+0530 I NETWORK  [conn13] end connection 127.0.0.1:56888 (0 connections now open)
+2015-11-23T19:04:23.155+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56918 #14 (1 connection now open)
+2015-11-23T19:04:39.783+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56935 #15 (2 connections now open)
+2015-11-23T19:04:39.899+0530 I ACCESS   [conn15] Successfully authenticated as principal inbeta on admin
+2015-11-23T19:05:22.306+0530 I NETWORK  [conn14] end connection 127.0.0.1:56918 (1 connection now open)
+2015-11-23T19:05:22.307+0530 I NETWORK  [conn15] end connection 127.0.0.1:56935 (0 connections now open)
+2015-11-23T19:05:43.813+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56963 #16 (1 connection now open)
+2015-11-23T19:09:39.317+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57089 #17 (2 connections now open)
+2015-11-23T19:09:42.604+0530 I ACCESS   [conn17] Successfully authenticated as principal inbeta on admin
+2015-11-23T19:10:52.500+0530 I NETWORK  [conn16] end connection 127.0.0.1:56963 (1 connection now open)
+2015-11-23T19:10:52.501+0530 I NETWORK  [conn17] end connection 127.0.0.1:57089 (0 connections now open)
+2015-11-25T09:04:16.284+0530 I STORAGE  [DataFileSync] flushing mmaps took 34060077ms  for 4 files
+2015-11-25T11:17:15.809+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50661 #18 (1 connection now open)
+2015-11-25T11:52:12.004+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51303 #19 (2 connections now open)
+2015-11-25T11:52:12.191+0530 I COMMAND  [conn19] command admin.$cmd command: saslStart { saslStart: 1, mechanism: "SCRAM-SHA-1", payload: BinData(0, 6E2C2C6E3D696E626574612C723D6169744F4E764230446C3B4E4D346D47256D4B5C3170382A) } keyUpdates:0 writeConflicts:0 numYields:0 reslen:171 locks:{ Global: { acquireCount: { r: 2 } }, MMAPV1Journal: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { R: 1 } } } 178ms
+2015-11-25T11:52:12.573+0530 I ACCESS   [conn19] Successfully authenticated as principal inbeta on admin
+2015-11-25T11:57:52.811+0530 I NETWORK  [conn18] end connection 127.0.0.1:50661 (1 connection now open)
+2015-11-25T11:57:52.811+0530 I NETWORK  [conn19] end connection 127.0.0.1:51303 (1 connection now open)
+2015-11-25T11:58:35.960+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51405 #20 (1 connection now open)
+2015-11-25T12:26:07.610+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51931 #21 (2 connections now open)
+2015-11-25T12:26:07.745+0530 I ACCESS   [conn21] Successfully authenticated as principal inbeta on admin
+2015-11-26T13:17:44.162+0530 I QUERY    [conn21] query admin.actpref query: { customerId: "1" } planSummary: EOF ntoreturn:0 ntoskip:0 nscanned:0 nscannedObjects:0 keyUpdates:0 writeConflicts:0 numYields:0 nreturned:0 reslen:20 locks:{ Global: { acquireCount: { r: 2 } }, MMAPV1Journal: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { R: 1 } } } 168ms
+2015-11-26T13:17:47.026+0530 I WRITE    [conn21] insert admin.log query: { _id: ObjectId('5656b921eed08a9ecc4762d8'), _class: "dto.NotificationLog", customerId: "1", pref: "EMAIL", notification: "Dear Aleshia Tomkiewicz,
+
+Congrats on booking tickets on BookMyShow. 
+
+Regards
+Relationship Manager
+", communicationId: "bankcustmastek@gmail.com", date: "Thu Nov 26 13:17:45 IST 2015" } ninserted:1 keyUpdates:0 writeConflicts:0 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, MMAPV1Journal: { acquireCount: { w: 2 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 421286 } }, Database: { acquireCount: { W: 1 } }, Collection: { acquireCount: { W: 1 } } } 976ms
+2015-11-26T13:17:47.028+0530 I COMMAND  [conn21] command admin.$cmd command: insert { insert: "log", ordered: true, documents: [ { _id: ObjectId('5656b921eed08a9ecc4762d8'), _class: "dto.NotificationLog", customerId: "1", pref: "EMAIL", notification: "Dear Aleshia Tomkiewicz,
+
+Congrats on booking tickets on BookMyShow. 
+
+Regards
+Relationship Manager
+", communicationId: "bankcustmastek@gmail.com", date: "Thu Nov 26 13:17:45 IST 2015" } ] } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, MMAPV1Journal: { acquireCount: { w: 2 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 421286 } }, Database: { acquireCount: { W: 1 } }, Collection: { acquireCount: { W: 1 } } } 1208ms
+2015-11-26T15:22:43.864+0530 I NETWORK  [conn21] end connection 127.0.0.1:51931 (1 connection now open)
+2015-11-26T15:22:43.864+0530 I NETWORK  [conn20] end connection 127.0.0.1:51405 (1 connection now open)
+2015-11-30T11:18:51.374+0530 I CONTROL  CTRL_CLOSE_EVENT signal
+2015-11-30T11:18:51.706+0530 I CONTROL  [consoleTerminate] got CTRL_CLOSE_EVENT, will terminate after current cmd ends
+2015-11-30T11:18:51.810+0530 I CONTROL  [consoleTerminate] now exiting
+2015-11-30T11:18:51.827+0530 I NETWORK  [consoleTerminate] shutdown: going to close listening sockets...
+2015-11-30T11:18:51.863+0530 I NETWORK  [consoleTerminate] closing listening socket: 348
+2015-11-30T11:18:51.881+0530 I NETWORK  [consoleTerminate] shutdown: going to flush diaglog...
+2015-11-30T11:18:51.881+0530 I NETWORK  [consoleTerminate] shutdown: going to close sockets...
+2015-11-30T11:18:51.909+0530 I STORAGE  [consoleTerminate] shutdown: waiting for fs preallocator...
+2015-11-30T11:18:51.910+0530 I STORAGE  [consoleTerminate] shutdown: final commit...
+2015-11-30T11:18:51.953+0530 I JOURNAL  [consoleTerminate] journalCleanup...
+2015-11-30T11:18:51.954+0530 I JOURNAL  [consoleTerminate] removeJournalFiles
+2015-11-30T11:18:52.219+0530 I JOURNAL  [consoleTerminate] Terminating durability thread ...
+2015-11-30T11:18:52.273+0530 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-11-30T11:18:52.283+0530 I JOURNAL  [durability] Durability thread stopped
+2015-11-30T11:18:52.294+0530 I STORAGE  [consoleTerminate] shutdown: closing all files...
+2015-11-30T11:18:52.335+0530 I STORAGE  [consoleTerminate] closeAllFiles() finished
+2015-11-30T11:18:52.336+0530 I STORAGE  [consoleTerminate] shutdown: removing fs lock...
+2015-11-30T11:18:52.337+0530 I CONTROL  [consoleTerminate] dbexit:  rc: 12

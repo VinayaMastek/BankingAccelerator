@@ -1,0 +1,10 @@
+Dear $fname $lname,
+
+A total amount of Rs$totAmt has been withdrawn from your account on $transactionDt within a span of $timesecs secs! 
+
+Please ignore this is valid. 
+
+Thank you for banking with us.
+
+Regards
+Relationship Manager

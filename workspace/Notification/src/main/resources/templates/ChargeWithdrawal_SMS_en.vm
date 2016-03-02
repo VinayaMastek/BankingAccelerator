@@ -1,0 +1,4 @@
+Dear $fname $lname,
+
+A charge withdrawal has been made of amount $amount from your account number $accountNumber
+on $transactionDt at $location and current balance is $balAmount 

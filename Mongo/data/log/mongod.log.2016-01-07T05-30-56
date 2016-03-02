@@ -1,0 +1,43 @@
+2015-12-10T14:29:26.314+0530 I CONTROL  Hotfix KB2731284 or later update is installed, no need to zero-out data files
+2015-12-10T14:29:26.324+0530 W -        [initandlisten] Detected unclean shutdown - D:\Notification\Mongo\data\db\mongod.lock is not empty.
+2015-12-10T14:29:26.348+0530 I JOURNAL  [initandlisten] journal dir=D:\Notification\Mongo\data\db\journal
+2015-12-10T14:29:26.349+0530 I JOURNAL  [initandlisten] recover begin
+2015-12-10T14:29:26.349+0530 I JOURNAL  [initandlisten] recover lsn: 21321568
+2015-12-10T14:29:26.349+0530 I JOURNAL  [initandlisten] recover D:\Notification\Mongo\data\db\journal\j._0
+2015-12-10T14:29:26.363+0530 I JOURNAL  [initandlisten] recover skipping application of section seq:0 < lsn:21321568
+2015-12-10T14:29:26.364+0530 I JOURNAL  [initandlisten] recover skipping application of section seq:14308131 < lsn:21321568
+2015-12-10T14:29:26.365+0530 I JOURNAL  [initandlisten] recover skipping application of section seq:14426282 < lsn:21321568
+2015-12-10T14:29:26.365+0530 I JOURNAL  [initandlisten] recover skipping application of section seq:14544642 < lsn:21321568
+2015-12-10T14:29:26.365+0530 I JOURNAL  [initandlisten] recover skipping application of section seq:14660792 < lsn:21321568
+2015-12-10T14:29:26.366+0530 I JOURNAL  [initandlisten] recover skipping application of section seq:14717032 < lsn:21321568
+2015-12-10T14:29:26.366+0530 I JOURNAL  [initandlisten] recover skipping application of section seq:14771552 < lsn:21321568
+2015-12-10T14:29:26.366+0530 I JOURNAL  [initandlisten] recover skipping application of section seq:15588163 < lsn:21321568
+2015-12-10T14:29:26.366+0530 I JOURNAL  [initandlisten] recover skipping application of section seq:18701645 < lsn:21321568
+2015-12-10T14:29:26.366+0530 I JOURNAL  [initandlisten] recover skipping application of section more...
+2015-12-10T14:29:26.408+0530 I JOURNAL  [initandlisten] recover cleaning up
+2015-12-10T14:29:26.408+0530 I JOURNAL  [initandlisten] removeJournalFiles
+2015-12-10T14:29:26.408+0530 I JOURNAL  [initandlisten] recover done
+2015-12-10T14:29:26.567+0530 I JOURNAL  [durability] Durability thread started
+2015-12-10T14:29:26.568+0530 I JOURNAL  [journal writer] Journal writer thread started
+2015-12-10T14:29:26.570+0530 I CONTROL  [initandlisten] MongoDB starting : pid=3140 port=27017 dbpath=D:\Notification\Mongo\data\db 64-bit host=IND-SPZ7LW75017
+2015-12-10T14:29:26.570+0530 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2015-12-10T14:29:26.571+0530 I CONTROL  [initandlisten] db version v3.0.6
+2015-12-10T14:29:26.571+0530 I CONTROL  [initandlisten] git version: 1ef45a23a4c5e3480ac919b28afcba3c615488f2
+2015-12-10T14:29:26.571+0530 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2015-12-10T14:29:26.571+0530 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-12-10T14:29:26.572+0530 I CONTROL  [initandlisten] options: { config: "D:\Notification\Mongo\mongodb.cfg", storage: { dbPath: "D:\Notification\Mongo\data\db" }, systemLog: { destination: "file", path: "D:\Notification\Mongo\data\log\mongod.log" } }
+2015-12-10T14:29:27.264+0530 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-12-10T14:29:57.746+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60554 #1 (1 connection now open)
+2015-12-10T14:34:52.172+0530 I NETWORK  [conn1] end connection 127.0.0.1:60554 (0 connections now open)
+2015-12-10T14:37:21.234+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60663 #2 (1 connection now open)
+2015-12-10T14:39:00.656+0530 I NETWORK  [conn2] end connection 127.0.0.1:60663 (0 connections now open)
+2015-12-10T14:40:04.008+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60720 #3 (1 connection now open)
+2015-12-10T14:42:36.304+0530 I NETWORK  [conn3] end connection 127.0.0.1:60720 (0 connections now open)
+2015-12-10T14:42:50.601+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60771 #4 (1 connection now open)
+2015-12-10T14:47:36.113+0530 I NETWORK  [conn4] end connection 127.0.0.1:60771 (0 connections now open)
+2015-12-10T14:47:58.429+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60852 #5 (1 connection now open)
+2015-12-10T14:50:08.427+0530 I NETWORK  [conn5] end connection 127.0.0.1:60852 (0 connections now open)
+2015-12-10T14:50:22.293+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60899 #6 (1 connection now open)
+2015-12-10T14:54:50.442+0530 I NETWORK  [conn6] end connection 127.0.0.1:60899 (0 connections now open)
+2015-12-10T17:17:22.918+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:63797 #7 (1 connection now open)
+2015-12-10T19:39:58.054+0530 I NETWORK  [conn7] end connection 127.0.0.1:63797 (0 connections now open)

@@ -1,0 +1,6 @@
+Book my show
+	Please click on the below link to get your QR Code. Just scan and pickup your tickets from the Venue kiosk(s) - http://bmsurl.co/4piJ4vMr 
+	Hi Customer, Booking ID: FMMA0000252585. Seats: SL-C12,C11,C10, 3 seat(s) for The Martian (3D) (U/A) on Sun, 4 Oct, 2015 4:55pm at INOX: Inorbit Mall, Malad (W) (SCREEN 1). Please carry your CC/DC card which was used for booking tickets.Please use your Conf. No. 252585 and TPIN No./Kiosk Pick-up Code : 7614 to collect tickets at INOX: Inorbit Mall, Malad (W)
+	
+Please click on the below link to get your QR Code. Just scan and pickup your tickets from the Venue kiosk(s) - $qrcodeurl
+Hi Customer, Booking ID: $bookingid. Seats: $seatnumbers $countofseats seat(s) for $moviename on $date at $movietheater, $location ($screen). Please carry your CC/DC card which was used for booking tickets.Please use your Conf. No. $confirmationno and TPIN No./Kiosk Pick-up Code : $kioskpickupcode to collect tickets at $movietheater

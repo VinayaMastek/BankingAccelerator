@@ -1,4 +1,4 @@
-This Repository has POC working done around Banking. Currently it consist of 4 projects
+This Repository has POC work done around Banking. Currently it consist of 4 projects
 
 1. Notification
 2. SMSProcessor

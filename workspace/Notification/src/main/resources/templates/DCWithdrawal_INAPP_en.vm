@@ -1,0 +1,12 @@
+Dear $fname $lname,
+
+Payment has been made of amount $amount from your account number $accountNumber
+on $transactionDt at $location and current balance is $balAmount using your Debit Card.
+
+Thank you for banking with us.
+
+Regards
+Relationship Manager
+
+
+

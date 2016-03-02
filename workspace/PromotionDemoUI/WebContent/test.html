@@ -1,0 +1,203 @@
+<head>
+<meta charset="UTF-8" />
+<title>Personalized Promotions</title>
+<meta name="description" content="Demo for Personalized Promotions">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href='http://fonts.googleapis.com/css?family=Terminal+Dosis'
+	rel='stylesheet' type='text/css' />
+
+<link rel="stylesheet" href="css/style.css">
+
+<style type="text/css">
+body {
+	font-family: 'WebSymbolsRegular';
+}
+</style>
+
+<script type="text/javascript">
+
+var xmlhttp;
+function init() {
+   // put more code here in case you are concerned about browsers that do not provide XMLHttpRequest object directly
+   xmlhttp = new XMLHttpRequest();
+}
+
+function invokeService() {
+    var customerid = document.getElementById("SelectCustomer").value;
+    var url = "http://localhost:9090/PromotionProcessor-0.1/spring/customerservice/gettransactions?customerId="+customerid;
+    xmlhttp.open('GET',url,true);
+    xmlhttp.send(null);
+    xmlhttp.onreadystatechange = function(){
+    	if (xmlhttp.readyState == 4) {
+            if ( xmlhttp.status == 200) {
+            	myFunction(xmlhttp.responseText);
+            }
+        }
+    }
+    
+	function myFunction(result){
+		deleteMyRows();
+		var jsonObj = JSON.parse(result);
+		jsonObj.transactions.forEach(function(obj){ 
+		    var trantable = document.getElementById("transactions");
+		    var tranrow = trantable.insertRow(-1);
+		    var account = tranrow.insertCell(0);
+		    var trandate = tranrow.insertCell(1);
+		    var vendor = tranrow.insertCell(2);
+		    var desc = tranrow.insertCell(3);
+		    var amt = tranrow.insertCell(4);
+		
+		    account.innerHTML = obj.other_account.number;
+		    trandate.innerHTML = obj.details.posted;
+		    vendor.innerHTML = obj.other_account.holder.name;
+		    desc.innerHTML = obj.details.description;
+		    amt.innerHTML = obj.details.value.amount;
+		});
+    }
+	
+	function deleteMyRows(){
+		var trantable = document.getElementById("transactions");
+	
+		if (trantable.rows.length >1){
+			for (var i = 1; i < trantable.rows.length; i++) {
+				trantable.deleteRow(i);
+			}
+		}
+	}
+	
+}
+</script>
+    
+</head>
+<body onload="init()">
+	<form action="#">
+		<div>
+			<div id="header" class="logo">
+				<a href="#">Personalized Promotions</a>
+			</div>
+
+			<div id="wrapper">
+				<div class="ca-div">
+					<label>Select Customer</label> <select style="margin-left: 10px"
+						id="SelectCustomer" onchange="invokeService()">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+				</div>
+
+				<details class="ca-detail">
+					<summary>Transactions for the Customer</summary>
+					<ul class="ca-table">
+						<li>
+							<table id="transactions">
+								<tr>
+									<th>Account</th>
+									<th>Date</th>
+									<th>Vendor</th>
+									<th>Description</th>
+									<th>Amount</th>
+								</tr>
+
+								<!-- 								
+								<tr>
+									<td>000349019</td>
+									<td>25-May-2015</td>
+									<td>Music India Pvt Ltd</td>
+									<td>MTV Top 20 of 2015</td>
+									<td>5000</td>
+								</tr>
+ -->
+							</table>
+						</li>
+						<li>
+							<!-- <table id="categories" class="ca-div-right"> -->
+							<table id="categories">
+								<tr>
+									<th>Vendor</th>
+									<th>Transactions</th>
+									<th>Categories</th>
+								</tr>
+								<tr>
+									<td>Music India Pvt Ltd</td>
+									<td>2</td>
+									<td>x,y,z</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+				</details>
+			</div>
+
+			<details class="ca-detail">
+				<summary>Personas</summary>
+				<ul class="ca-menu">
+					<li><a href="#"> <span class="ca-icon">K</span></a>
+						<div class="ca-content">
+							<h2 class="ca-main">Urban Intellectual</h2>
+							<h3 class="ca-sub">Fine-Dining</h3>
+							<h3 class="ca-sub">Apparels</h3>
+							<h3 class="ca-sub">Gifts</h3>
+							<h3 class="ca-sub">Flowers</h3>
+							<h3 class="ca-sub">Hobby</h3>
+						</div></li>
+
+
+					<li><a href="#"> <span class="ca-icon">M</span></a>
+						<div class="ca-content">
+							<h2 class="ca-main">Premium-Prudent</h2>
+							<h3 class="ca-sub">Fine-Dining</h3>
+							<h3 class="ca-sub">Luxury</h3>
+							<h3 class="ca-sub">Travel</h3>
+							<h3 class="ca-sub">Apparels</h3>
+							<h3 class="ca-sub">Travel</h3>
+							<h3 class="ca-sub">Spa</h3>
+						</div></li>
+
+					<li><a href="#"> <span class="ca-icon">C</span></a>
+						<div class="ca-content">
+							<h2 class="ca-main">Affluent</h2>
+							<h3 class="ca-sub">Home-Appliance</h3>
+							<h3 class="ca-sub">Car-Accessories</h3>
+							<h3 class="ca-sub">Fine-Dining</h3>
+							<h3 class="ca-sub">Beach Resort</h3>
+							<h3 class="ca-sub">Travel</h3>
+							<h3 class="ca-sub">Luxury</h3>
+							<h3 class="ca-sub">Travel</h3>
+							<h3 class="ca-sub">Gadgets</h3>
+							<h3 class="ca-sub">Spa</h3>
+							<h3 class="ca-sub">5-Star</h3>
+						</div></li>
+
+					<li><a href="#"> <span class="ca-icon">H</span></a>
+						<div class="ca-content">
+							<h2 class="ca-main">Family-Value-Minded</h2>
+							<h3 class="ca-sub">Home-Appliance</h3>
+							<h3 class="ca-sub">Car-Accessories</h3>
+							<h3 class="ca-sub">Groceries</h3>
+							<h3 class="ca-sub">Travel</h3>
+							<h3 class="ca-sub">Apparels</h3>
+							<h3 class="ca-sub">Books</h3>
+						</div></li>
+					<li><a href="#"> <span class="ca-icon">Z</span></a>
+						<div class="ca-content">
+							<h2 class="ca-main">Early-Adopter</h2>
+							<h3 class="ca-sub">Travel</h3>
+							<h3 class="ca-sub">Apparels</h3>
+							<h3 class="ca-sub">Books</h3>
+							<h3 class="ca-sub">Car-Accessories</h3>
+							<h3 class="ca-sub">Gadgets</h3>
+						</div></li>
+				</ul>
+			</details>
+			<details class="ca-detail">
+				<summary>Promotions</summary>
+			</details>
+		</div>
+	</form>
+</body>
+
+</html>

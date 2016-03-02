@@ -1,0 +1,10 @@
+Dear $fname $lname,
+
+We are glad to inform you that an amount of $TAmt has been deposited in your account number $AccountNumber
+on $TDate and current balance is $BalanceAmt at $Location
+
+Thank you for banking with us.
+
+Regards
+John Doe
+Relationship Manager
