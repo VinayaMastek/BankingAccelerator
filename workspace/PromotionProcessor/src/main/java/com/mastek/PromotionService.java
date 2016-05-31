@@ -112,5 +112,4 @@ public class PromotionService {
 
    }
 
-//http://localhost:9090/PromotionProcessor-0.1/spring/promotionservice/getPromotions?promotionData=value1&field1=somefieldvalue1&field2=somefieldvalue2
 //http://localhost:9090/PromotionProcessor-0.1/spring/promotionservice/getPromotions?customerId=1

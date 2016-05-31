@@ -52,7 +52,7 @@ import dao.CustomerDetails;
 
 @Path("/banks/CBANK/customer")
 @Component
-public class CustomerPersonaService {
+public class CustomerPersonaServiceNOTREQD {
 
 	@Autowired
 	CustomerService customerservice;
@@ -83,5 +83,3 @@ public class CustomerPersonaService {
 	}
 
 }
-
-// http://localhost:8080/PromotionProcessor-0.1/spring/promotionservice/getPromotions?promotionData=value1&field1=somefieldvalue1&field2=somefieldvalue2

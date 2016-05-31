@@ -98,69 +98,20 @@ public class CustomerProfileService {
 		return new JSONObject(custDetails).toString();
 	}
 
-	/*
-	 * public String getCustomerPreference(String customerId) {
-	 * 
-	 * 
-	 * // for a customer id find the accounts JSONObject customerAcctDet = new
-	 * JSONObject( customerservice.getOtherDetails(customerId));
-	 * 
-	 * JSONArray accounts = customerAcctDet.getJSONArray("accounts");
-	 * 
-	 * 
-	 * 
-	 * Map<String,JSONObject> vendorlist = new HashMap<String, JSONObject>();
-	 * Map<String,List> vendorCategoryMap = vendorservice.getVendorMap();
-	 * 
-	 * // loop through the accounts and get all the transactions for each
-	 * account for (int i = 0; i < accounts.length(); i++) { JSONObject
-	 * acctTransactions = new JSONObject(
-	 * customerservice.getAccountTransactions(customerId, accounts
-	 * .getJSONObject(i).getString("id"))); JSONArray transactions =
-	 * acctTransactions .getJSONArray("transactions"); double tranamt = 0; //
-	 * loop through the transactions list to get vendors and count of
-	 * transactions for (Object obj : transactions){ JSONObject transaction =
-	 * (JSONObject) obj;
-	 * 
-	 * if (haskey(transaction, "other_account.holder.name",
-	 * "details.value.amount")) { // transaction amount tranamt =
-	 * transaction.getJSONObject
-	 * ("details").getJSONObject("value").getDouble("amount");
-	 * 
-	 * // vendor details String key = transaction.getJSONObject("other_account")
-	 * .getJSONObject("holder").getString("name"); Integer value = 1;
-	 * 
-	 * //calculate number of transactions for the vendor and total transaction
-	 * amount if (vendorlist.containsKey(key)) { value =
-	 * vendorlist.get(key).getInt("count") + 1; tranamt = tranamt +
-	 * vendorlist.get(key).getDouble("tranamt") ; vendorlist.remove(key); }
-	 * 
-	 * // update categories List<String> vendorCat =
-	 * vendorCategoryMap.containsKey(key)?(List) vendorCategoryMap.get(key):
-	 * (List) Arrays.asList("UnKnown");
-	 * 
-	 * // construct json with details of the vendor with categories, count of
-	 * transactions and transaction amount JSONObject vendordet = new
-	 * JSONObject(); vendordet.put("count",value);
-	 * vendordet.put("categories",vendorCat); vendordet.put("tranamt", tranamt);
-	 * vendorlist.put(key, vendordet); } } }
-	 * 
-	 * CustomerDetails customerDetails = new CustomerDetails();
-	 * customerDetails.setSpendMap("spends",vendorlist.values());
-	 * customerDetails.setPersona(customerDetails.derivePersona());
-	 * 
-	 * return new JSONObject(customerDetails).toString(); }
-	 */
 	public String getCustomerPreference(String customerId) {
 
 		Map<String, JSONObject> vendorlist = new HashMap<String, JSONObject>();
 		Map<String, List> vendorCategoryMap = vendorservice.getVendorMap();
 
+
+		
 		// get transactions for the customer across all accounts
 		// account
 		JSONObject acctTransactions = new JSONObject(
 				customerservice.getTransactions(customerId));
 		JSONArray transactions = acctTransactions.getJSONArray("transactions");
+		
+		
 		double tranamt = 0;
 		// loop through the transactions list to get vendors and count of
 		// transactions
@@ -232,5 +183,3 @@ public class CustomerProfileService {
 	}
 
 }
-
-// http://localhost:8080/PromotionProcessor-0.1/spring/promotionservice/getPromotions?promotionData=value1&field1=somefieldvalue1&field2=somefieldvalue2
